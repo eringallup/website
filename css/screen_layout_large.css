@@ -151,10 +151,10 @@ body {
 .headshotsub:hover * {
   opacity: 1;
    -webkit-transition: all 0.25s ease;
-       -moz-transition: all 0.25s ease;
-        -ms-transition: all 0.25s ease;
-         -o-transition: all 0.25s ease;
-            transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+       -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+           transition: all 0.25s ease;
 }
 
 .subphoto_rarelead {
