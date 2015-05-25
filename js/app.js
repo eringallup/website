@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $(document).on('click', '.view-slides', function() {
+  $(document).on('click', '.view-slides', function(e) {
+    e.preventDefault();
+    var $target = $(e.target);
     $('html').addClass('slideshowing');
   }).on('keypress', function(e) {
     if (e.keyCode === 27) {
@@ -12,8 +14,9 @@ $(document).ready(function() {
     }
   });
   $('.slideshow').slick({
-    dots: true,
-    prevArrow: '<i class="slick-prev clickable fa fa-arrow-left"></i>',
-    nextArrow: '<i class="slick-next clickable fa fa-arrow-right"></i>'
+    mobileFirst: true,
+    fade: true,
+    prevArrow: '<i class="left-arrow clickable"></i>',
+    nextArrow: '<i class="right-arrow clickable"></i>'
   });
 });
