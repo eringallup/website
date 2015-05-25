@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
 }
+body {
+  padding-bottom: 80px;
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -38,7 +41,8 @@ img.responsive {
 .photo-container {
   position: relative;
   height: 517px;
-  top: -90px;
+  top: -111px;
+  margin-bottom: -111px;
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -50,8 +54,9 @@ img.responsive {
 }
 
 .header h1 {
-  margin: 40px 0 0 40px;
   float: left;
+  margin: 0 0 0 40px;
+  line-height: 1;
 }
 .header img {
   margin: 28px 40px 0 0;
@@ -167,7 +172,7 @@ img.responsive {
   font-size: 18px;
   color: #ccc;
   float: right;
-  margin: 90px -40px 0 0px;
+  margin: 82px -40px 0 0;
 }
 .headshotsub p {
   color: #333;
@@ -197,22 +202,20 @@ img.responsive {
   position: relative;
   display: inline-block;
   background-color: #FFF;
-  padding: 5px 40px;
-  margin: 150px 0;
+  padding: 20px 40px;
+  margin: 150px 15px;;
   -webkit-transition: all 0.25s ease;
      -moz-transition: all 0.25s ease;
       -ms-transition: all 0.25s ease;
        -o-transition: all 0.25s ease;
           transition: all 0.25s ease;
 }
+.whitecard h5 {
+  line-height: .9;
+  margin: 5px 0 20px;
+}
 .slideshowing .whitecard {
   opacity: 0;
-}
-.subcard h6 {
-  margin-top: -45px;
-}
-.subcard h5 {
-  margin-top: 25px;
 }
 
 .slideshowing .subphoto-rarelead {
@@ -304,23 +307,6 @@ img.responsive {
   max-width: 60%;
 }
 
-@media (max-width: 767px) {
-  .slide-left,
-  .slideshow img {
-    float: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
-  .slide-left {
-    max-width: 50%;
-    margin: 30px auto;
-  }
-  .slide-left p {
-    padding: 0;
-  }
-}
-
 .left-arrow,
 .right-arrow {
   position: absolute;
@@ -344,6 +330,37 @@ img.responsive {
 .right-arrow { background-image: url(http://eringallup.info/images2/arrow_rightart.png); }
 .right-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_right2art.png); }
 
+.body-container {
+  max-width: 1000px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body-left {
+  float: left;
+  width: 30%;
+}
+.body-right {
+  float: right;
+  width: 60%;
+}
+.body-title {
+  max-width: 8em;
+  margin: 0 auto;
+  padding: 15px 0;
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+}
+.body-title * {
+  color: #333;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+.body-title h3 {
+  text-transform: uppercase;
+  font-family: Garamond, Times, Serif;
+}
 
 
 
@@ -359,5 +376,36 @@ img.responsive {
 
 
 
-
-
+@media (max-width: 767px) {
+  .body-left,
+  .body-right,
+  .slide-left,
+  .slideshow img {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .slide-left {
+    max-width: 50%;
+    margin: 30px auto;
+  }
+  .slide-left p {
+    padding: 0;
+  }
+  .body-title {
+    max-width: 100%;
+  }
+  .body-left {
+    margin: 0 15px 15px;;
+  }
+  .body-right {
+    margin: 10px 15px;
+  }
+  .whitecard h4 {
+    font-size: 1.7em;
+  }
+  .whitecard h5 {
+    font-size: 3em;
+  }
+}
