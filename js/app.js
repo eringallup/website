@@ -3,6 +3,9 @@ $(document).ready(function() {
     e.preventDefault();
     var $target = $(e.target);
     $('html').addClass('slideshowing');
+    setTimeout(function() {
+      $('.modal .slick-list').focus();
+    });
   }).on('keypress', function(e) {
     if (e.keyCode === 27) {
       $('html').removeClass('slideshowing');
@@ -18,5 +21,10 @@ $(document).ready(function() {
     fade: true,
     prevArrow: '<i class="left-arrow clickable"></i>',
     nextArrow: '<i class="right-arrow clickable"></i>'
+  });
+  $(document).on('keydown.slick', '.slick-list', function(e) {
+    if (e.keyCode === 27) {
+      $('html').removeClass('slideshowing');
+    }
   });
 });
