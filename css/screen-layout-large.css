@@ -28,14 +28,14 @@ img.responsive {
   max-height: 100%;
 }
 
-.header_container {
+.header-container {
   position: relative;
   z-index: 10;
   width: 100%;
   margin: 0 auto;
   padding: 0;
 }
-.photo_container {
+.photo-container {
   position: relative;
   height: 517px;
   top: -90px;
@@ -43,7 +43,7 @@ img.responsive {
   overflow: hidden;
   text-align: center;
 }
-.layout_container {
+.layout-container {
   width: 960px;
   margin: 0 auto;
   padding: 0;
@@ -183,12 +183,12 @@ img.responsive {
            transition: all 0.25s ease;
 }
 
-.subphoto_rarelead {
+.subphoto-rarelead {
   position: absolute;
   top: -30px; bottom: -30px; left: -30px; right: -30px;
   background-size: cover;
 }
-.subphoto_rarelead {
+.subphoto-rarelead {
   background-image: url(../images/rarelead.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -215,7 +215,7 @@ img.responsive {
   margin-top: 25px;
 }
 
-.slideshowing .subphoto_rarelead {
+.slideshowing .subphoto-rarelead {
   -webkit-filter: grayscale(100%) blur(5px);
      -moz-filter: grayscale(100%) blur(5px);
           filter: grayscale(100%) blur(5px);
