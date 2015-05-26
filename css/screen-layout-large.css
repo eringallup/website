@@ -11,13 +11,13 @@ body {
 
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .clickable {
@@ -128,7 +128,7 @@ img.responsive {
 .thumbwords {
   position: relative;
   display: block;
-  top: 80px;
+  top: 63px;
   z-index: 5;
   text-align: center;
   font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
