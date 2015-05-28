@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+img.responsive {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header_container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.photo_container {
+  position: relative;
+  height: 517px;
+  top: -90px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.layout_container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header h1 {
+  margin: 40px 0 0 40px;
+  float: left;
+}
+.header img {
+  margin: 28px 40px 0 0;
+  float: right;
+}
+
+.hometitle {
+  text-align: center;
+  display: block;
+  margin-top: -30px;
+}
+
+.hometitle h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+.titlecap {
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px 0 20px;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+}
+
+.homethumbs {
+  margin-top: 50px;
+}
+
+.thumb {
+  position: relative;
+  float: left;
+  display: block;
+  height: 160px;
+  width: 310px;
+  overflow: hidden;
+  margin: 4px;
+  cursor: pointer !important;
+}
+.thumb:nth-child(3n) {
+  margin-right: 0;
+}
+
+.thumbimage {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  left: -10px;
+  bottom: -10px;
+  z-index: 3;
+  cursor: pointer;
+  -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+          filter: blur(5px);
+}
+.thumb:hover .thumbimage {
+  cursor: pointer;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+
+.thumbwords {
+  position: relative;
+  display: block;
+  top: 80px;
+  z-index: 5;
+  text-align: center;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.headshot,
+.headshotsub {
+  float: right;
+}
+.headshot img,
+.headshotsub img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  -webkit-clip-path: circle(50% at 50% 50%);
+     -moz-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transition: all 0.25s linear;
+     -moz-transition: all 0.25s linear;
+      -ms-transition: all 0.25s linear;
+       -o-transition: all 0.25s linear;
+          transition: all 0.25s linear;
+}
+.headshot a:hover,
+.headshotsub a:hover {
+  opacity: 1;
+}
+
+.headshot p,
+.headshotsub p {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  font-family: Garamond, Times, Serif;
+  font-weight: normal;
+  font-style: oblique;
+  font-size: 18px;
+  color: #333;
+  float: right;
+  margin: 90px -40px 0 0px;
+}
+
+.headshot:hover p,
+.headshotsub:hover * {
+  opacity: 1;
+   -webkit-transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+       -ms-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+           transition: all 0.25s ease;
+}
+
+.subphoto_rarelead {
+  position: absolute;
+  top: -30px; bottom: -30px; left: -30px; right: -30px;
+  background-size: cover;
+}
+.subphoto_rarelead {
+  background-image: url(../images/rarelead.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.whitecard {
+  position: relative;
+  display: inline-block;
+  background-color: #FFF;
+  padding: 5px 40px;
+  margin: 150px 0;
+}
+.subcard h6 {
+  margin-top: -45px;
+}
+.subcard h5 {
+  margin-top: 25px;
+}
+
+.slideshowing .subphoto_rarelead {
+  -webkit-filter: grayscale(100%) blur(6px);
+     -moz-filter: grayscale(100%) blur(6px);
+          filter: grayscale(100%) blur(6px);
+}
+.slideshowing .whitecard {
+ visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  visibility: collapse;
+  overflow: hidden;
+  padding: 30px 80px;
+  background-color: rgba(0, 0, 0, .1);
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+     -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+       -o-transition: opacity 0.25s ease;
+          transition: opacity 0.25s ease;
+}
+.slideshowing .modal {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-body {
+  position: relative;
+  margin: 0 auto;
+  z-index: 60;
+  opacity: 0;
+  height: 100%;
+  width: 536px;
+  -webkit-transition: opacity 0.25s ease;
+     -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+       -o-transition: opacity 0.25s ease;
+          transition: opacity 0.25s ease;
+}
+.slideshowing .modal-body {
+  opacity: 1;
+}
+.slick-dots {
+ visibility: hidden;
+}
+.slick-list,
+.slick-slider {
+  height: 100%;
+}
+.slick-slide {
+  background-color: #fff;
+}
+.slick-slide img {
+  margin: 0 auto;
+}
