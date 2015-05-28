@@ -66,7 +66,7 @@ img.responsive {
 .hometitle {
   text-align: center;
   display: block;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 
 .hometitle h2 {
@@ -89,7 +89,7 @@ img.responsive {
 }
 
 .homethumbs {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .thumb {
@@ -145,6 +145,7 @@ img.responsive {
 .headshot img,
 .headshotsub img {
   height: 50px;
+  opacity: .4;
   width: auto;
   cursor: pointer;
   -webkit-clip-path: circle(50% at 50% 50%);
@@ -156,8 +157,8 @@ img.responsive {
        -o-transition: all 0.25s linear;
           transition: all 0.25s linear;
 }
-.headshot:hover {
-  opacity: 0.6;
+.headshot img:hover {
+  opacity: 1;
 }
 
 .headshot p,
@@ -170,7 +171,7 @@ img.responsive {
   font-weight: normal;
   font-style: oblique;
   font-size: 18px;
-  color: #ccc;
+  color: #333;
   float: right;
   margin: 82px -40px 0 0;
 }
@@ -214,7 +215,23 @@ img.responsive {
   line-height: .9;
   margin: 5px 0 20px;
 }
+.whitecard h6 {
+  background-color: #FFF;
+  text-align: center;
+  padding: 10px;
+  max-width: 150px;
+  margin: 0 auto;
+  color: #666;
+}
+.whitecard:hover h6{
+  background-color: #F1F1F1;
+  color: #333;
+}
 .slideshowing .whitecard {
+  opacity: 0;
+}
+
+.slideshowing .header {
   opacity: 0;
 }
 
@@ -291,16 +308,19 @@ img.responsive {
 }
 .slide-left h4 {
   color: #fff;
-  line-height: 1;
+  line-height: .75;
   margin: 0;
 }
 .slide-left hr {
   margin: 1em 0;
   border: 1px solid #fff;
+  opacity: .6;
   border-width: 0 0 1px;
 }
 .slide-left p {
   padding-right: 40px;
+  line-height: 28px;
+
 }
 .slideshow img {
   float: right;
@@ -325,27 +345,46 @@ img.responsive {
   left: auto;
   right: -50px;
 }
+.close {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  width: 45px;
+  height: 45px;
+  margin-top: -22px;
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+}
 .left-arrow { background-image: url(http://eringallup.info/images2/arrow_leftart.png); }
 .left-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_left2art.png); }
 .right-arrow { background-image: url(http://eringallup.info/images2/arrow_rightart.png); }
 .right-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_right2art.png); }
+.close { background-image: url(http://eringallup.info/images2/close.png); }
+.close:hover { background-image: url(http://eringallup.info/images2/closehover.png); }
 
 .body-container {
   max-width: 1000px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 .body-left {
   float: left;
-  width: 30%;
+  width: 20%;
+  margin-left: 140px;
+  margin-top: 10px;
 }
 .body-right {
   float: right;
-  width: 60%;
+  width: 50%;
+  margin-right: 100px;
+  line-height: 2em;
 }
 .body-title {
-  max-width: 8em;
+  /* max-width: 8em; */
   margin: 0 auto;
   padding: 15px 0;
   border: 1px solid #ccc;
@@ -360,6 +399,8 @@ img.responsive {
 .body-title h3 {
   text-transform: uppercase;
   font-family: Garamond, Times, Serif;
+  font-size: .85em;
+  letter-spacing: 2px;
 }
 
 
