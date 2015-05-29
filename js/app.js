@@ -15,6 +15,8 @@ $(document).ready(function() {
     if ($target.hasClass('modal')) {
       $('html').removeClass('slideshowing');
     }
+  }).on('click', '.close-modal', function(e) {
+    $('html').removeClass('slideshowing');
   });
   if ($.fn.slick) {
     $('.slideshow').slick({

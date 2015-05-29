@@ -9,7 +9,7 @@ body {
   padding-bottom: 80px;
 }
 
-html {
+* {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -26,9 +26,8 @@ html {
 
 img.responsive {
   width: auto;
-  height: 460px;
+  max-height: 460px;
   max-width: 100%;
-  max-height: 100%;
 }
 
 .header-container {
@@ -268,7 +267,7 @@ img.responsive {
   z-index: 60;
   opacity: 0;
   height: 100%;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: left;
   -webkit-transition: opacity 0.25s ease;
@@ -284,7 +283,17 @@ img.responsive {
 .slick-slider {
   height: 100%;
 }
-.slick-slide .slide-left {
+body .slick-slide,
+body .slick-slide.slick-active {
+  opacity: 1 !important;
+  -webkit-transition: none !important;
+     -moz-transition: none !important;
+      -ms-transition: none !important;
+       -o-transition: none !important;
+          transition: none !important;
+}
+.slick-slide .slide-left,
+.slick-slide .slide-right {
   opacity: 0;
   -webkit-transition: opacity 0.25s ease;
      -moz-transition: opacity 0.25s ease;
@@ -295,8 +304,8 @@ img.responsive {
 .slick-slide.slick-active .slide-left {
   opacity: .9;
 }
-.slick-slide img {
-  margin: 0 auto;
+.slick-slide.slick-active .slide-right {
+  opacity: 1;
 }
 
 .slide-left {
@@ -320,10 +329,18 @@ img.responsive {
 .slide-left p {
   padding-right: 0px;
   line-height: 28px;
-
 }
-.slideshow img {
-  max-width: 60%;
+.slide-right {
+  float: right;
+  width: 60%;
+}
+
+.slick-slide img {
+  margin: 0 auto;
+}
+.slick-slide img.center {
+  margin-top: 100px;
+  max-width: 80%;
 }
 
 .left-arrow,
@@ -346,23 +363,25 @@ img.responsive {
 }
 .close {
   position: absolute;
-  top: 50%;
-  left: -50px;
-  width: 45px;
-  height: 45px;
-  margin-top: -22px;
-  -webkit-transition: all 0.25s ease;
-     -moz-transition: all 0.25s ease;
-      -ms-transition: all 0.25s ease;
-       -o-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  top: 50px;
+  right: 55px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: 100%;
+  cursor: pointer;
+  -webkit-transition: opacity 0.25s ease;
+     -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+       -o-transition: opacity 0.25s ease;
+          transition: opacity 0.25s ease;
 }
 .left-arrow { background-image: url(http://eringallup.info/images2/arrow_leftart.png); }
 .left-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_left2art.png); }
 .right-arrow { background-image: url(http://eringallup.info/images2/arrow_rightart.png); }
 .right-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_right2art.png); }
-.close { background-image: url(http://eringallup.info/images2/close.png); }
-.close:hover { background-image: url(http://eringallup.info/images2/closehover.png); }
+.close { background-image: url(http://eringallup.info/images2/closehover.png); opacity: .7; }
+.close:hover { opacity: 1; }
 
 .body-container {
   max-width: 1000px;
@@ -420,14 +439,17 @@ img.responsive {
   .body-left,
   .body-right,
   .slide-left,
-  .slideshow img {
+  .slide-right {
+    position: relative;
     float: none;
-    width: 100%;
+    width: auto;
+    height: auto;
     max-width: 100%;
+    max-height: 100%;
     padding: 0;
   }
   .slide-left {
-    max-width: 50%;
+    max-width: 80%;
     margin: 30px auto;
   }
   .slide-left p {
@@ -437,15 +459,24 @@ img.responsive {
     max-width: 100%;
   }
   .body-left {
-    margin: 0 15px 15px;;
+    margin: 0 0 15px;;
   }
   .body-right {
-    margin: 10px 15px;
+    margin: 10px 0;
+  }
+  .body-left,
+  .body-right {
+    padding: 0 15px;
   }
   .whitecard h4 {
     font-size: 1.7em;
   }
   .whitecard h5 {
     font-size: 3em;
+  }
+}
+@media (max-width: 479px) {
+  .slick-slide img.center {
+    margin-top: 0;
   }
 }
