@@ -26,7 +26,7 @@ html {
 
 img.responsive {
   width: auto;
-  height: auto;
+  height: 460px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -236,9 +236,9 @@ img.responsive {
 }
 
 .slideshowing .subphoto-rarelead {
-  -webkit-filter: grayscale(100%) blur(5px);
-     -moz-filter: grayscale(100%) blur(5px);
-          filter: grayscale(100%) blur(5px);
+  -webkit-filter: grayscale(0%) blur(5px);
+     -moz-filter: grayscale(0%) blur(5px);
+          filter: grayscale(0%) blur(5px);
 }
 
 .modal {
@@ -251,7 +251,7 @@ img.responsive {
   visibility: collapse;
   padding: 30px 0;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .3);
   opacity: 0;
   -webkit-transition: opacity 0.25s ease;
      -moz-transition: opacity 0.25s ease;
@@ -268,7 +268,7 @@ img.responsive {
   z-index: 60;
   opacity: 0;
   height: 100%;
-  width: 80%;
+  width: 800px;
   margin: 0 auto;
   text-align: left;
   -webkit-transition: opacity 0.25s ease;
@@ -302,7 +302,7 @@ img.responsive {
 .slide-left {
   float: left;
   width: 40%;
-  padding: 138px 30px 30px;
+  padding: 100px 30px 30px;
   color: #fff;
   line-height: 1.2;
 }
@@ -318,12 +318,11 @@ img.responsive {
   border-width: 0 0 1px;
 }
 .slide-left p {
-  padding-right: 40px;
+  padding-right: 0px;
   line-height: 28px;
 
 }
 .slideshow img {
-  float: right;
   max-width: 60%;
 }
 
@@ -374,13 +373,13 @@ img.responsive {
 .body-left {
   float: left;
   width: 20%;
-  margin-left: 140px;
+  margin-left: 130px;
   margin-top: 10px;
 }
 .body-right {
   float: right;
   width: 50%;
-  margin-right: 100px;
+  margin-right: 82px;
   line-height: 2em;
 }
 .body-title {
