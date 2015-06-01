@@ -1,11 +1,12 @@
 $(document).ready(function() {
+
   $(document).on('click', '.view-slides', function(e) {
     e.preventDefault();
     var $target = $(e.target);
     $('html').addClass('slideshowing');
     setTimeout(function() {
       $('.modal .slick-list').focus();
-    });
+    }, 10);
   }).on('keypress', function(e) {
     if (e.keyCode === 27) {
       $('html').removeClass('slideshowing');
@@ -31,9 +32,9 @@ $(document).ready(function() {
       }
     });
   }
+
   var onResize = function() {
     var windowWidth = $(window).width();
-    console.warn(windowWidth);
     $('.distribute').each(function() {
       var items = $(this).find('> *');
       var equalWidth = Math.round(100 / items.length);
@@ -62,4 +63,5 @@ $(document).ready(function() {
   onResize();
   onResize = _.debounce(onResize, 300);
   $(window).on('resize', onResize);
+
 });
