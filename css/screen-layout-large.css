@@ -307,9 +307,15 @@ body .slick-slide.slick-active {
 }
 
 .slide-left {
-  padding-top: 100px;
+  padding-top: 70px;
   color: #fff;
   line-height: 1.2;
+}
+.slide-pager {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-style: italic;
+  color: rgba(255, 255, 255, .4);
 }
 .slide-left h4 {
   color: #fff;

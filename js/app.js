@@ -33,6 +33,15 @@ $(document).ready(function() {
     });
   }
 
+  $('.slick-track').each(function() {
+    var slides = $(this).find('.slick-slide');
+    slides.each(function(idx, item) {
+      var $pager = $('<span class="slide-pager" />');
+      $pager.text((idx + 1) + ' of ' + slides.length);
+      $(item).find('.slide-left').prepend($pager);
+    });
+  });
+
   var onResize = function() {
     var windowWidth = $(window).width();
     $('.distribute').each(function() {
