@@ -423,6 +423,7 @@ body .slick-slide.slick-active {
   color: #999;
   font-style: normal;
   text-align: center;
+  letter-spacing: 2px;
 }
 .project .lead,
 .details .lead {
