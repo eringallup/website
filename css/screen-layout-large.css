@@ -489,7 +489,8 @@ body .slick-slide.slick-active {
   border: 1px solid #cfcfcf;
 }
 .project-item h5,
-.details-item h5 {
+.details-item h5,
+.beforeafter-item h5 {
   margin-bottom: .9em;
   font-size: 30px;
   text-transform: lowercase;
@@ -513,6 +514,27 @@ body .slick-slide.slick-active {
   letter-spacing: .03em;
 }
 .details-item {
+  text-align: center;
+}
+
+
+.beforeafter {
+  background-color: transparent;
+  padding: 15px 0;
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+}
+.beforeafter-title {
+  margin-bottom: 30px;
+}
+.beforeafter-item h5 {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: .4em;
+  font-style: italic;
+  letter-spacing: .03em;
+}
+.beforeafter-item {
   text-align: center;
 }
 
