@@ -174,7 +174,7 @@ img.responsive {
   margin: 82px -40px 0 0;
 }
 .headshotsub p {
-  color: #333;
+  color: rgba(255,255,255,0);
 }
 
 .headshot:hover p,
