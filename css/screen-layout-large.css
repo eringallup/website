@@ -259,9 +259,9 @@ img.responsive {
 }
 
 .slideshowing .subphoto-rarelead, .slideshowing .subphoto-coinledger, .slideshowing .subphoto-currencycheatsheet, .slideshowing .subphoto-quantcast, .slideshowing .subphoto-bnbledger, .slideshowing .subphoto-creativelive {
-  -webkit-filter: grayscale(0%) blur(5px);
-     -moz-filter: grayscale(0%) blur(5px);
-          filter: grayscale(0%) blur(5px);
+  -webkit-filter: grayscale(0%) blur(6px);
+     -moz-filter: grayscale(0%) blur(6px);
+          filter: grayscale(0%) blur(6px);
 }
 
 .eg-modal {
