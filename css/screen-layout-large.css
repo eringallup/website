@@ -585,7 +585,7 @@ body .slick-slide.slick-active {
   margin: 15px 80px;
   }
   .project-item {
-  margin: 0 80px;
+  margin: 0 30px;
     }
   .project-item img.logo{
   width:50%;
@@ -601,7 +601,7 @@ body .slick-slide.slick-active {
   height: auto;
 }
 .project, .details {
-  margin: 30px 80px;
+  margin: 30px 100px;
   }
 }
 
