@@ -55,6 +55,10 @@ p {
   margin: 0 0 .75em;
 }
 a {
+  color: #5cb4ea;
+  text-decoration: none;
+}
+a:hover {
   color: #5e9ec6;
   text-decoration: none;
 }
