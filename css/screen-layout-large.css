@@ -19,7 +19,10 @@ body {
 .headshot img,
 .headshotsub img,
 .headshot:hover p,
-.headshotsub:hover * {
+.headshotsub:hover *,
+.whitecard,
+.eg-modal,
+.eg-modal-body {
   -webkit-transition: opacity 0.25s linear;
      -moz-transition: opacity 0.25s linear;
       -ms-transition: opacity 0.25s linear;
@@ -116,16 +119,14 @@ img.responsive {
   padding-right: 30px;
   text-align: center;
 }
-.headshot img,
-.headshotsub img {
+.headshot img {
   display: block;
   height: 50px;
   width: auto;
   opacity: .4;
   margin: 28px auto 0;
 }
-.headshot p,
-.headshotsub p {
+.headshot p {
   position: relative;
   opacity: 0;
   margin: 0;
@@ -135,79 +136,43 @@ img.responsive {
   font-size: 18px;
   color: #333;
 }
-.headshot:hover p,
-.headshot:hover img {
+.headshot:hover * {
   opacity: 1;
 }
 
 
+/* ------------- Projects ------------- */
 
-
-
-
-
-
-
-
-
-
-
-
+.project-page .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 .photo-container {
   position: relative;
   height: 517px;
-  top: -111px;
-  margin-bottom: -111px;
-  width: 100%;
   overflow: hidden;
   text-align: center;
 }
-.subphoto-rarelead, .subphoto-coinledger, .subphoto-currencycheatsheet, .subphoto-quantcast, .subphoto-bnbledger, .subphoto-creativelive{
+.subphoto {
   position: absolute;
-  top: -30px; bottom: -30px; left: -30px; right: -30px;
+  top: -30px;
+  right: -30px;
+  bottom: -30px;
+  left: -30px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-.subphoto-rarelead {
-  background-image: url(../images/rarelead.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.subphoto-coinledger {
-  background-image: url(../images/coinledger.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.subphoto-currencycheatsheet {
-  background-image: url(../images/currencycheatsheet.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.subphoto-quantcast {
-  background-image: url(../images/quantcast.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.subphoto-bnbledger {
-  background-image: url(../images/bnbledger.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.subphoto-creativelive {
-  background-image: url(../images/creativelive.jpg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 .whitecard {
   position: relative;
   display: inline-block;
   background-color: #FFF;
   padding: 20px 40px;
-  margin: 150px 15px;;
-  -webkit-transition: all 0.25s ease;
-     -moz-transition: all 0.25s ease;
-      -ms-transition: all 0.25s ease;
-       -o-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  margin: 150px 15px;
+  cursor: pointer;
 }
 .whitecard h5 {
   line-height: .9;
@@ -233,7 +198,7 @@ img.responsive {
   opacity: 0;
 }
 
-.slideshowing .subphoto-rarelead, .slideshowing .subphoto-coinledger, .slideshowing .subphoto-currencycheatsheet, .slideshowing .subphoto-quantcast, .slideshowing .subphoto-bnbledger, .slideshowing .subphoto-creativelive {
+.slideshowing .subphoto {
   -webkit-filter: grayscale(0%) blur(6px);
      -moz-filter: grayscale(0%) blur(6px);
           filter: grayscale(0%) blur(6px);
@@ -251,11 +216,6 @@ img.responsive {
   overflow: hidden;
   background-color: rgba(0, 0, 0, .3);
   opacity: 0;
-  -webkit-transition: opacity 0.25s ease;
-     -moz-transition: opacity 0.25s ease;
-      -ms-transition: opacity 0.25s ease;
-       -o-transition: opacity 0.25s ease;
-          transition: opacity 0.25s ease;
 }
 .slideshowing .eg-modal {
   visibility: visible;
@@ -268,11 +228,6 @@ img.responsive {
   height: 100%;
   margin: 0 auto;
   text-align: left;
-  -webkit-transition: opacity 0.25s ease;
-     -moz-transition: opacity 0.25s ease;
-      -ms-transition: opacity 0.25s ease;
-       -o-transition: opacity 0.25s ease;
-          transition: opacity 0.25s ease;
 }
 .slideshowing .eg-modal-body {
   opacity: 1;

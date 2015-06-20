@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(document).on('click', '.view-slides', function(e) {
+  $(document).on('click', '[view-slides]', function(e) {
     e.preventDefault();
     var $target = $(e.target);
     $('html').addClass('slideshowing');
