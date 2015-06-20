@@ -94,6 +94,17 @@ h1 a:visited {
        -o-transition: opacity 0.25s linear;
           transition: opacity 0.25s linear;
 }
+.slick-slide .slide-left,
+.slick-slide .slide-right,
+.left-arrow,
+.right-arrow,
+.close {
+  -webkit-transition: opacity 0.25s ease;
+     -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+       -o-transition: opacity 0.25s ease;
+          transition: opacity 0.25s ease;
+}
 
 
 
@@ -255,16 +266,18 @@ img.responsive {
   margin: 0 auto;
   color: #666;
 }
-.whitecard:hover h6{
+.whitecard:hover h6 {
   background-color: #F1F1F1;
   color: #333;
 }
+
+/* ------------- Slideshow ------------- */
+
 .slideshowing .whitecard,
 .slideshowing .project-page .header h1 a,
 .slideshowing .project-page .header .headshot {
   opacity: 0;
 }
-
 .slideshowing .project-page .header h1 a {
   opacity: .1;
   color: #fff;
@@ -272,13 +285,11 @@ img.responsive {
 .slideshowing .project-page .header h1 a:hover {
   opacity: .5;
 }
-
 .slideshowing .subphoto {
-  -webkit-filter: grayscale(0%) blur(6px);
-     -moz-filter: grayscale(0%) blur(6px);
-          filter: grayscale(0%) blur(6px);
+  -webkit-filter: blur(6px);
+     -moz-filter: blur(6px);
+          filter: blur(6px);
 }
-
 .eg-modal {
   position: absolute;
   top: 0;
@@ -323,11 +334,6 @@ body .slick-slide.slick-active {
 .slick-slide .slide-left,
 .slick-slide .slide-right {
   opacity: 0;
-  -webkit-transition: opacity 0.25s ease;
-     -moz-transition: opacity 0.25s ease;
-      -ms-transition: opacity 0.25s ease;
-       -o-transition: opacity 0.25s ease;
-          transition: opacity 0.25s ease;
 }
 .slick-slide.slick-active .slide-left {
   opacity: .9;
@@ -376,40 +382,18 @@ body .slick-slide.slick-active {
   position: absolute;
   top: 50%;
   left: -50px;
-  width: 45px;
-  height: 45px;
-  margin-top: -22px;
-  -webkit-transition: all 0.25s ease;
-     -moz-transition: all 0.25s ease;
-      -ms-transition: all 0.25s ease;
-       -o-transition: all 0.25s ease;
-          transition: all 0.25s ease;
+  margin-top: -.6em;
+  font: normal 90px arial, sans-serif;
+  color: rgba(255, 255, 255, .5);
 }
 .right-arrow {
   left: auto;
   right: -50px;
 }
-.close {
-  position: absolute;
-  top: 50px;
-  right: 55px;
-  width: 20px;
-  height: 20px;
-  display: block;
-  background-size: 100%;
-  cursor: pointer;
-  -webkit-transition: opacity 0.25s ease;
-     -moz-transition: opacity 0.25s ease;
-      -ms-transition: opacity 0.25s ease;
-       -o-transition: opacity 0.25s ease;
-          transition: opacity 0.25s ease;
+.left-arrow:hover,
+.right-arrow:hover {
+  color: rgba(255, 255, 255, .8);
 }
-.left-arrow { background-image: url(http://eringallup.info/images2/arrow_leftart.png); }
-.left-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_left2art.png); }
-.right-arrow { background-image: url(http://eringallup.info/images2/arrow_rightart.png); }
-.right-arrow:hover { background-image: url(http://eringallup.info/images2/arrow_right2art.png); }
-.close { background-image: url(http://eringallup.info/images2/closehover.png); opacity: .7; }
-.close:hover { opacity: 1; }
 
 .body-container {
   margin-top: 30px;

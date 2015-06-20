@@ -23,8 +23,8 @@ $(document).ready(function() {
     $('.slideshow').slick({
       mobileFirst: true,
       fade: true,
-      prevArrow: '<i class="left-arrow clickable"></i>',
-      nextArrow: '<i class="right-arrow clickable"></i>'
+      prevArrow: '<i class="left-arrow clickable">&lsaquo;</i>',
+      nextArrow: '<i class="right-arrow clickable">&rsaquo;</i>'
     });
     $(document).on('keydown.slick', '.slick-list', function(e) {
       if (e.keyCode === 27) {
