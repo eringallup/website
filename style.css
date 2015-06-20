@@ -74,7 +74,13 @@ h1 a,
 h1 a:hover,
 h1 a:focus,
 h1 a:active,
-h1 a:visited,
+h1 a:visited {
+  -webkit-transition: all 0.25s linear;
+     -moz-transition: all 0.25s linear;
+      -ms-transition: all 0.25s linear;
+       -o-transition: all 0.25s linear;
+          transition: all 0.25s linear;
+}
 .headshot img,
 .headshotsub img,
 .headshot:hover p,
@@ -207,7 +213,11 @@ img.responsive {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+}
+.project-page .header h1 a,
+.project-page .header .headshot {
+  position: relative;
+  z-index: 60;
 }
 .photo-container {
   position: relative;
@@ -249,12 +259,18 @@ img.responsive {
   background-color: #F1F1F1;
   color: #333;
 }
-.slideshowing .whitecard {
+.slideshowing .whitecard,
+.slideshowing .project-page .header h1 a,
+.slideshowing .project-page .header .headshot {
   opacity: 0;
 }
 
-.slideshowing .header {
-  opacity: 0;
+.slideshowing .project-page .header h1 a {
+  opacity: .1;
+  color: #fff;
+}
+.slideshowing .project-page .header h1 a:hover {
+  opacity: .5;
 }
 
 .slideshowing .subphoto {
