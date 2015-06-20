@@ -38,7 +38,12 @@ $(document).ready(function() {
     slides.each(function(idx, item) {
       var $pager = $('<span class="slide-pager" />');
       $pager.text((idx + 1) + ' of ' + slides.length);
-      $(item).find('.slide-left').prepend($pager);
+      $(item).find('.slide-left, .slide-right').each(function() {
+        var $div = $('<div class="tbl-cell va-middle" />');
+        $div.html($(this).html());
+        $(this).html($div);
+      });
+      $(item).find('.slide-left > div').prepend($pager);
     });
   });
 
