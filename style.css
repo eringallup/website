@@ -235,7 +235,7 @@ img.responsive {
 }
 .photo-container {
   position: relative;
-  height: 517px;
+  min-height: 517px;
   overflow: hidden;
   text-align: center;
 }
@@ -325,7 +325,6 @@ img.responsive {
 .slick-list,
 .slick-slider,
 .slick-track,
-/*.slide-left,*/
 .slide-right {
   height: 100%;
 }
@@ -350,7 +349,6 @@ body .slick-slide.slick-active {
 }
 
 .slide-left {
-  /*padding-top: 70px;*/
   padding-top: 12%;
   color: #fff;
   line-height: 1.2;
@@ -564,8 +562,30 @@ body .slick-slide.slick-active {
     background-size: cover;
   }
 
+  .eg-modal {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .slick-list,
+  .slick-slider,
+  .slick-track,
+  .slide-right {
+    height: auto;
+  }
+  .slide-left,
+  .slide-right {
+    width: 100%;
+  }
+  .eg-modal {
+    padding-top: 120px;
+  }
+
   .slide-left hr,
   .slide-left p {
+    display: none;
+  }
+  .slideshowing .whitecard {
     display: none;
   }
   .whitecard h4 {

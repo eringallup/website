@@ -11,24 +11,31 @@ $(document).ready(function() {
     if (e.keyCode === 27) {
       $('html').removeClass('slideshowing');
     }
-  }).on('click', '.modal', function(e) {
-    var $target = $(e.target);
-    if ($target.hasClass('modal')) {
-      $('html').removeClass('slideshowing');
-    }
-  }).on('click', '.close-modal', function(e) {
-    $('html').removeClass('slideshowing');
   });
   if ($.fn.slick) {
     $('.slideshow').slick({
       mobileFirst: true,
       fade: true,
+      accessibility: false,
       prevArrow: '<i class="left-arrow clickable">&lsaquo;</i>',
       nextArrow: '<i class="right-arrow clickable">&rsaquo;</i>'
     });
-    $(document).on('keydown.slick', '.slick-list', function(e) {
+    $(document).on('click', '.eg-modal', function(e) {
+      var $target = $(e.target);
+      var tagName = e.target.tagName.toLowerCase();
+      if (tagName === 'img' || $target.hasClass('slide-right')) {
+        $('.slideshow').slick('slickNext');
+      } else if (tagName !== 'i') {
+        $('html').removeClass('slideshowing');
+      }
+    });
+    $(document).on('keydown', function(e) {
       if (e.keyCode === 27) {
         $('html').removeClass('slideshowing');
+      } else if (e.keyCode === 39) {
+        $('.slideshow').slick('slickNext');
+      } else if (e.keyCode === 37) {
+        $('.slideshow').slick('slickPrev');
       }
     });
   }
