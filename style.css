@@ -127,6 +127,16 @@ img.responsive {
 }
 
 
+hr {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px;
+}
+
+.color-twitter { color: #55acee; }
+.color-linkedin { color: #0077b5; }
+
 
 .sub-header {
   margin: 0 0 60px;
@@ -402,6 +412,7 @@ img.responsive {
 }
 #about .left-col {
   text-align: center;
+  margin-bottom: 50px;
 }
 #about .small-header {
   margin: 40px 0 0;
@@ -419,7 +430,35 @@ img.responsive {
 #about .logopile {
   margin-top: 20px;
 }
-
+#about .circle {
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about .email {
+  color: inherit;
+}
+#about .social {
+  margin: 20px 0;
+  font-size: 25px;
+}
+.events,
+.articles {
+  padding: 15px;
+}
+#about .events .small-header,
+#about .articles .small-header {
+  margin: 0 0 20px;
+}
+.events ul,
+.articles ul {
+  color: #999;
+  text-align: left;
+  font-size: 15px;
+}
+.events .location {
+  color: #333;
+}
 
 
 /* ------------- Projects ------------- */
@@ -665,11 +704,16 @@ body .slick-slide.slick-active {
 .project-items {
   padding: 0 20px;
   margin-top: 15px;
+  text-align: center;
 }
 .project-item {
   padding: 30px 20px;
   border: 2px solid #fff;
   border-width: 0 2px 0 0;
+}
+.project-item.col-sm-6 {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .project-item:last-child {
   border-width: 0;
@@ -753,13 +797,13 @@ body .slick-slide.slick-active {
 
 
 @media (max-width: 767px) {
-  .hometitle {
+  #home .hometitle {
     padding-top: 0;
   }
-  .hometitle em {
+  #home .hometitle em {
     font-size: 70px;
   }
-  .hometitle span {
+  #home .hometitle span {
     font-size: 14px;
   }
   .thumb {
@@ -768,6 +812,13 @@ body .slick-slide.slick-active {
   }
   .thumbimage {
     background-size: cover;
+  }
+
+  #about .hometitle strong {
+    font-size: 38px;
+  }
+  #about .hometitle em {
+    font-size: 46px;
   }
 
   .eg-modal {
@@ -786,7 +837,7 @@ body .slick-slide.slick-active {
     width: 100%;
   }
   .eg-modal {
-    padding-top: 120px;
+    padding-top: 30px;
   }
 
   .slide-left hr,
@@ -795,6 +846,28 @@ body .slick-slide.slick-active {
   }
   .slideshowing .whitecard {
     display: none;
+  }
+
+  .photo-container {
+    height: 400px;
+  }
+  .subphoto {
+    background-position: 50% 0;
+    background-size: inherit;
+    -webkit-filter: blur(5px);
+       -moz-filter: blur(5px);
+            filter: blur(5px);
+  }
+  #coin-ledger .subphoto  { background-position: -1px; }
+  #creativelive .subphoto { background-position: -197px 30px; }
+  #quantcast .subphoto { background-position: 57% 30px; }
+  #rare-lead .subphoto { background-position: 16% 26px; }
+  #bnb-ledger .subphoto { background-position: 13% 36px; }
+  #ccs .subphoto { background-position: 18% 26px; }
+
+  .whitecard {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .whitecard h4 {
     font-size: 1.7em;
@@ -816,33 +889,22 @@ body .slick-slide.slick-active {
     max-width: 50%;
   }
   .body-title {
-  border-width: 0 0 1px 0 ;
-  margin: 0 80px;
+    border-width: 0 0 1px;
+    margin: 0 80px;
   }
   .body-right p {
-  margin: 30px 80px;
+    margin: 30px 80px;
   }
   .project .lead, .details .lead {
-  margin: 15px 80px;
+    margin: 15px 80px;
   }
-  .project-item {
-  margin: 0 30px;
-    }
-  .project-item img.logo{
-  width:50%;
-    }
   .body-container img.responsive {
-  width: 75%;
-  margin: 0 80px;
-  height: auto;
-}
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+  }
   .body-container img.phone {
-  width: 40%;
-  margin: 0 200px;
-  height: auto;
-}
-.project, .details {
-  margin: 30px 100px;
+    width: 40%;
   }
 }
 
@@ -871,38 +933,9 @@ body .slick-slide.slick-active {
     text-align: center;
     padding-top: 30px;
   }
-  .slide-left hr {
-    opacity: 0;
-    }
-  .project .lead, .details .lead {
-    margin: 15px 30px;
-  }
 
-  .body-container img.responsive {
-    width: 90%;
-    margin: 0 20px;
-  }
-  .body-container img.phone {
-    width: 70%;
-    margin: 0 50px;
-    height: auto;
-  }
-
-  .project, .details {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    }
-
-  .project .container {
-    margin: 30px 80px;
-    }
-  .project-item {
-    margin: 0 20px;
-      }
-  .project-item img.logo{
-    width:50%;
-    }
-    .project, .details {
-    margin: 30px 50px;
+  .project .project-item {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
