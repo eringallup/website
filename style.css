@@ -120,11 +120,6 @@ h1 a:visited {
 .clickable {
   cursor: pointer;
 }
-img.responsive {
-  width: auto;
-  max-height: 460px;
-  max-width: 100%;
-}
 
 
 hr {
@@ -622,6 +617,8 @@ body .slick-slide.slick-active {
 }
 
 .slick-slide img {
+  width: auto;
+  max-height: 460px;
   margin: 0 auto;
 }
 
@@ -729,6 +726,8 @@ body .slick-slide.slick-active {
 .project img {
   max-width: 100%;
   max-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .project img.outline {
   border: 1px solid #cfcfcf;
@@ -821,11 +820,6 @@ body .slick-slide.slick-active {
     font-size: 46px;
   }
 
-  .eg-modal {
-    position: relative;
-    padding-top: 0;
-  }
-
   .slick-list,
   .slick-slider,
   .slick-track,
@@ -849,11 +843,12 @@ body .slick-slide.slick-active {
   }
 
   .photo-container {
-    height: 400px;
+    height: 560px;
+    padding: 0;
   }
   .subphoto {
     background-position: 50% 0;
-    background-size: inherit;
+    background-size: cover;
     -webkit-filter: blur(5px);
        -moz-filter: blur(5px);
             filter: blur(5px);
@@ -898,7 +893,7 @@ body .slick-slide.slick-active {
   .project .lead, .details .lead {
     margin: 15px 80px;
   }
-  .body-container img.responsive {
+  .body-container .img-responsive {
     display: block;
     width: 75%;
     margin: 0 auto;
@@ -924,14 +919,26 @@ body .slick-slide.slick-active {
     margin: 30px 20px;
   }
 
+  .users-first .devices > * {
+    margin-bottom: 30px;
+  }
+
   .body-title {
     border-width: 0 0 1px;
     margin: 0 20px;
   }
+
+  .eg-modal {
+    padding-top: 110px;
+  }
+
   .slick-slide.slick-active .slide-left {
     opacity: .9;
     text-align: center;
     padding-top: 30px;
+  }
+  .slick-slide img {
+    max-height: 320px;
   }
 
   .project .project-item {
