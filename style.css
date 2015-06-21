@@ -219,6 +219,144 @@ img.responsive {
   opacity: 1;
 }
 
+.sub-header {
+  margin: 0 0 30px;
+  text-align: center;
+  font-family: Garamond, Times, Serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.sub-header > * {
+  display: inline-block;
+}
+.sub-header strong {
+  margin-right: .3em;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: lowercase;
+}
+.sub-header span {
+  position: relative;
+  top: -.4em;
+}
+.sub-header em {
+  margin-left: .3em;
+  font-style: italic;
+  font-size: 50px;
+  text-transform: lowercase;
+}
+.sub-header p {
+  margin: 0;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  text-transform: lowercase;
+}
+
+
+/* ------------- Home Layers ------------- */
+
+.elements {
+  margin-top: 60px;
+}
+.elements ul strong {
+  display: block;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+}
+.elements ul p {
+  margin-bottom: .6em;
+}
+.elements ul li {
+  position: relative;
+  margin-left: 1.5em;
+}
+.elements ul li:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  left: -1.5em;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50px;
+  background-color: #666;
+}
+.elements-flow:before { background-color: #e373e3 !important; }
+.elements-nav:before { background-color: #a5d877 !important; }
+.elements-copy:before { background-color: #76dbfd !important; }
+.elements-look:before { background-color: #ffd659 !important; }
+
+
+
+.users-first {
+  margin-top: 60px;
+}
+.users-first .sub-header {
+  margin-bottom: 60px;
+}
+.users-first .devices > * {
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 2px solid #f1f1f1;
+  border-width: 0 2px 0 0;
+}
+.users-first .devices > :last-child {
+  border: none;
+}
+.users-first .icon {
+  text-align: center;
+  color: #e4e4e4;
+  font-size: 45px;
+}
+.users-first h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Garamond, Times, Serif;
+  font-size: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.users-first img {
+  display: block;
+  max-width: 160px;
+  margin: 0 auto;
+}
+.users-first h5 {
+  display: table;
+  width: 100%;
+  height: 4.1em;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #333;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+.users-first h5 span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.users-first .devices p {
+  margin: 20px 0;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-size: 15px;
+
+}
+.users-first .devices em {
+  font-family: Garamond, Times, Serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+.process {
+  margin-top: 60px;
+}
+
 
 /* ------------- Projects ------------- */
 
