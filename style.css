@@ -128,31 +128,99 @@ img.responsive {
 
 
 
+.sub-header {
+  margin: 0 0 60px;
+  text-align: center;
+  line-height: 1;
+}
+.sub-header h1,
+.sub-header h2,
+.sub-header h3,
+.sub-header h4,
+.sub-header h5,
+.sub-header h6 {
+  font-size: inherit;
+  font-style: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+.sub-header > * > * {
+  margin-right: 8px;
+}
+.sub-header > * > :last-child {
+  margin-right: 0;
+}
+.sub-header strong,
+.sub-header span,
+.sub-header em {
+  display: inline-block;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.sub-header strong {
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: lowercase;
+}
+.small-header,
+.sub-header span {
+  font-size: 14px;
+  font-style: normal;
+  position: relative;
+  font-family: Garamond, Times, Serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  top: -.2em;
+}
+.small-header {
+  display: block;
+  top: auto;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.em-header,
+.sub-header em {
+  font-style: italic;
+  font-size: 50px;
+  font-family: Garamond, Times, Serif;
+  text-transform: lowercase;
+}
+.sub-header p {
+  margin: 20px 0 0;
+  font-size: 15px;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
+  text-transform: lowercase;
+}
+
+
+
 .header h1 {
   line-height: 1;
   padding-left: 30px;
 }
-.hometitle h2 {
-  line-height: 1;
+.hometitle {
   padding-top: 40px;
 }
-.hometitle .titlecap {
-  display: inline-block;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: 2px;
-  vertical-align: middle;
-  padding: 0 10px 0 20px;
+#home .hometitle .sub-header {
+  margin-bottom: 0;
 }
-.hometitle .subtitle {
-  margin: 10px 0 0;
+#home .hometitle em {
+  font-size: 100px;
+}
+#home .hometitle span {
+  font-size: 19px;
+  top: -.8em;
+  margin: 0 3px 0 5px;
+}
+#home .hometitle p {
+  margin-top: 10px;
 }
 
 
 
 .homethumbs {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .thumb {
   display: table;
@@ -219,39 +287,6 @@ img.responsive {
   opacity: 1;
 }
 
-.sub-header {
-  margin: 0 0 30px;
-  text-align: center;
-  font-family: Garamond, Times, Serif;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.sub-header > * {
-  display: inline-block;
-}
-.sub-header strong {
-  margin-right: .3em;
-  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  text-transform: lowercase;
-}
-.sub-header span {
-  position: relative;
-  top: -.4em;
-}
-.sub-header em {
-  margin-left: .3em;
-  font-style: italic;
-  font-size: 50px;
-  text-transform: lowercase;
-}
-.sub-header p {
-  margin: 0;
-  font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
-  text-transform: lowercase;
-}
-
 
 /* ------------- Home Layers ------------- */
 
@@ -265,7 +300,7 @@ img.responsive {
   font-size: 28px;
 }
 .elements ul p {
-  margin-bottom: .6em;
+  margin: 0 0 5px;
 }
 .elements ul li {
   position: relative;
@@ -319,7 +354,6 @@ img.responsive {
 }
 .users-first img {
   display: block;
-  max-width: 160px;
   margin: 0 auto;
 }
 .users-first h5 {
@@ -356,6 +390,36 @@ img.responsive {
 .process {
   margin-top: 60px;
 }
+
+
+/* ------------- About Page ------------- */
+
+#about .hometitle strong {
+  font-size: 45px;
+}
+#about .hometitle em {
+  font-size: 60px;
+}
+#about .left-col {
+  text-align: center;
+}
+#about .small-header {
+  margin: 40px 0 0;
+}
+#about .em-header {
+  font-size: 35px;
+}
+#about .devices li {
+  margin-right: 5px;
+  font-size: 40px;
+}
+#about .devices li:last-child {
+  margin-right: 0;
+}
+#about .logopile {
+  margin-top: 20px;
+}
+
 
 
 /* ------------- Projects ------------- */
@@ -689,8 +753,14 @@ body .slick-slide.slick-active {
 
 
 @media (max-width: 767px) {
-  .hometitle h2 {
+  .hometitle {
     padding-top: 0;
+  }
+  .hometitle em {
+    font-size: 70px;
+  }
+  .hometitle span {
+    font-size: 14px;
   }
   .thumb {
     width: 100%;
@@ -780,12 +850,6 @@ body .slick-slide.slick-active {
 @media (max-width: 399px) {
   .header h1 {
     padding-left: 0;
-  }
-  .hometitle h2 {
-    font-size: 4.5em;
-  }
-  .hometitle .titlecap {
-    padding: 0 5px 0 10px;
   }
   .headshot {
     padding-right: 0;

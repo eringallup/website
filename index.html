@@ -12,7 +12,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="home">
 
 <div class="container-fluid header">
   <div class="row">
@@ -20,17 +20,23 @@
       <h1>e.g.</h1>
     </div>
     <div class="col-sm-2 col-sm-push-8 col-xs-6 text-right">
-      <a class="headshot" href="#"><img class="img-circle" src="images/headshot.png"><p>about</p></a>
+      <a class="headshot" href="./about.html"><img class="img-circle" src="images/headshot.png"><p>about</p></a>
     </div>
     <div class="col-sm-8 col-sm-pull-2 col-xs-12 text-center hometitle">
-      <h2>made<span class="titlecap">for</span>use</h2>
-      <p class="subtitle">product design that puts the user first</p>
+      <div class="sub-header">
+        <h2>
+          <em>Made</em>
+          <span>for</span>
+          <em>Use</em>
+        </h2>
+        <p>product design that puts the user first</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container container-wide">
-  <div class="homethumbs row">
+<div class="container container-wide homethumbs">
+  <div class="row">
     <a class="col-sm-4 thumb" href="projects/coin-ledger.html">
       <div>
         <span class="thumbimage" style="background-image: url(images/home_bitcoin.png);"></span>
@@ -73,16 +79,18 @@
 <div class="container container-wide elements">
   <div class="row">
     <div class="col-sm-12 sub-header">
-      <strong>Four Elements</strong>
-      <span>for</span>
-      <em>Ease of Use</em>
+      <h3>
+        <strong>Four Elements</strong>
+        <span>for</span>
+        <em>Ease of Use</em>
+      </h3>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-4 text-right">
       <img src="../images/fourelements.png" class="img-responsive">
     </div>
-    <div class="col-sm-4 col-sm-offset-2 col-xs-6 col-xs-offset-3">
+    <div class="col-sm-4 col-sm-offset-2 col-xs-8 col-xs-offset-2">
       <ul class="list-unstyled">
         <li class="elements-flow">
           <strong>natural flow</strong>
@@ -108,9 +116,11 @@
 <div class="container container-wide users-first">
   <div class="row">
     <div class="col-sm-12 sub-header">
-      <strong>User</strong>
-      <span>(Not Device)</span>
-      <em>First</em>
+      <h3>
+        <strong>User</strong>
+        <span>(Not Device)</span>
+        <em>First</em>
+      </h3>
       <p class="col-sm-12 text-center">design for the use case rather than the case used</p>
     </div>
   </div>
@@ -118,7 +128,7 @@
     <div class="col-sm-3">
       <div class="icon"><i class="fa fa-mobile"></i></div>
       <h4>Mobile</h4>
-      <img src="images/userfirst_mobile.png">
+      <img class="img-responsive" src="images/userfirst_mobile.png">
       <h5><span>users are on the go</span></h5>
       <p>They are likely focusing on multiple actions at the same time (like walking,waiting or talking).</p>
       <em>Design should let them do one task easily.</em>
@@ -126,7 +136,7 @@
     <div class="col-sm-3">
       <div class="icon"><i class="fa fa-tablet"></i></div>
       <h4>Tablet</h4>
-      <img src="images/userfirst_tablet.png">
+      <img class="img-responsive" src="images/userfirst_tablet.png">
       <h5><span>users are browsing</span></h5>
       <p>They are focused and stationary. They don’t have the features of their laptops and aren’t expecting to use them.</p>
       <em>Design should let them read easily.</em>
@@ -134,7 +144,7 @@
     <div class="col-sm-3">
       <div class="icon"><i class="fa fa-laptop"></i></div>
       <h4>Laptop</h4>
-      <img src="images/userfirst_laptop.png">
+      <img class="img-responsive" src="images/userfirst_laptop.png">
       <h5><span>users are at work,<br> home, or on the go</span></h5>
       <p>They are in a meeting, on an airplane or on the couch. They have access to all their files but are looking at a smaller screen.</p>
       <em>Design should let them feel organized within a rectangular space.</em>
@@ -142,7 +152,7 @@
     <div class="col-sm-3">
       <div class="icon"><i class="fa fa-desktop"></i></div>
       <h4>Desktop</h4>
-      <img src="images/userfirst_desktop.png">
+      <img class="img-responsive" src="images/userfirst_desktop.png">
       <h5><span>users are at work</span></h5>
       <p>They are focused here many hours a day. They have the ability to use full features and the space to see it all.</p>
       <em>Design should let them feel focused and organized within a large space.</em>
@@ -153,8 +163,10 @@
 <div class="container container-wide process">
   <div class="row">
     <div class="col-sm-12 sub-header">
-      <strong>User-Focused</strong>
-      <em>Approach</em>
+      <h3>
+        <strong>User-Focused</strong>
+        <em>Approach</em>
+      </h3>
       <p class="col-sm-12 text-center">a rapid process that allows for user feedback and easy refinement</p>
     </div>
   </div>
