@@ -423,7 +423,8 @@ hr {
   margin-right: 0;
 }
 #about .logopile {
-  margin-top: 20px;
+  display: block;
+  margin: 20px auto;
 }
 #about .circle {
   max-height: 200px;
@@ -793,8 +794,11 @@ body .slick-slide.slick-active {
 
 
 
-
-
+@media (max-width: 991px) {
+  #about .circle {
+    max-height: 150px;
+  }
+}
 @media (max-width: 767px) {
   #home .hometitle {
     padding-top: 0;
@@ -818,6 +822,9 @@ body .slick-slide.slick-active {
   }
   #about .hometitle em {
     font-size: 46px;
+  }
+  #about .logopile {
+    max-width: 75%;
   }
 
   .slick-list,
