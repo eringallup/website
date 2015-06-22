@@ -262,7 +262,7 @@ hr {
   font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
   font-size: 30px;
   color: #fff;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+  /*text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);*/
 }
 
 
@@ -307,7 +307,7 @@ hr {
   line-height: 1.2;
 }
 .elements ul p {
-  margin: 0 0 5px;
+  margin: 0 0 15px 5px;
   font-size: 17px;
 }
 .elements ul li {
@@ -359,6 +359,7 @@ hr {
   font-size: 14px;
   font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .users-first img {
   display: block;
