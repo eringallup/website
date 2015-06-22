@@ -1,3 +1,32 @@
+var onResize = function() {
+  var windowWidth = $(window).width();
+  $('.distribute').each(function() {
+    var items = $(this).find('> *');
+    var equalWidth = Math.round(100 / items.length);
+    if (windowWidth > 767) {
+      items.css('width', equalWidth + '%');
+    } else {
+      items.css('width', '');
+    }
+  });
+  $('.match-height').each(function() {
+    var items = $(this).find('> *');
+    items.height('auto');
+    var tallest = 0;
+    items.each(function() {
+      var height = $(this).height();
+      if (height > tallest) {
+        tallest = height;
+      }
+    });
+    if (windowWidth > 767) {
+      items.height(tallest);
+    } else {
+      items.height(null);
+    }
+  });
+};
+onResize = _.debounce(onResize, 300);
 $(document).ready(function() {
 
   $(document).on('click', '[view-slides]', function(e) {
@@ -54,35 +83,6 @@ $(document).ready(function() {
     });
   });
 
-  var onResize = function() {
-    var windowWidth = $(window).width();
-    $('.distribute').each(function() {
-      var items = $(this).find('> *');
-      var equalWidth = Math.round(100 / items.length);
-      if (windowWidth > 767) {
-        items.css('width', equalWidth + '%');
-      } else {
-        items.css('width', '');
-      }
-    });
-    $('.match-height').each(function() {
-      var items = $(this).find('> *');
-      var tallest = 0;
-      items.each(function() {
-        var height = $(this).height();
-        if (height > tallest) {
-          tallest = height;
-        }
-      });
-      if (windowWidth > 767) {
-        items.height(tallest);
-      } else {
-        items.height(null);
-      }
-    });
-  };
-  onResize();
-  onResize = _.debounce(onResize, 300);
   $(window).on('resize', onResize);
-
 });
+$(window).load(onResize);

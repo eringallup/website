@@ -193,7 +193,7 @@ hr {
 }
 .sub-header p {
   margin: 20px 0 0;
-  font-size: 15px;
+  font-size: 17px;
   font-family: 'Lato', Helvetica, Arial, Verdana, Sans-serif;
   text-transform: lowercase;
 }
@@ -220,6 +220,7 @@ hr {
 }
 #home .hometitle p {
   margin-top: 10px;
+  font-size: 17px;
 }
 
 
@@ -306,6 +307,7 @@ hr {
 }
 .elements ul p {
   margin: 0 0 5px;
+  font-size: 17px;
 }
 .elements ul li {
   position: relative;
@@ -652,7 +654,8 @@ body .slick-slide.slick-active {
 .body-right {
   line-height: 2em;
 }
-.body-right p{
+.body-right p {
+  font-size: 17px;
   margin: 0 0 1.5em 0;
 }
 .body-title {
@@ -695,7 +698,7 @@ body .slick-slide.slick-active {
 .project .lead,
 .details .lead {
   margin: 15px 0;
-  font-size: 15px;
+  font-size: 17px;
   color: #333;
   text-align: center;
 }
@@ -740,6 +743,9 @@ body .slick-slide.slick-active {
   font-size: 30px;
   text-transform: lowercase;
   text-align: center;
+}
+.project-item p {
+  font-size: 15px;
 }
 
 .details {
@@ -788,6 +794,12 @@ body .slick-slide.slick-active {
   margin:20px 0 60px 0;
   border: 1px solid #cfcfcf;
 }
+.body-container img.phone {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -804,10 +816,14 @@ body .slick-slide.slick-active {
     padding-top: 0;
   }
   #home .hometitle em {
-    font-size: 70px;
+    font-size: 60px;
   }
   #home .hometitle span {
+    top: -.6em;
     font-size: 14px;
+  }
+  #home .fourelements {
+    margin-bottom: 30px;
   }
   .thumb {
     width: 100%;
@@ -922,17 +938,19 @@ body .slick-slide.slick-active {
 
 
 @media (max-width: 479px) {
-  .body-right p {
-    margin: 30px 20px;
-  }
-
   .users-first .devices > * {
     margin-bottom: 30px;
   }
 
   .body-title {
     border-width: 0 0 1px;
-    margin: 0 20px;
+    margin: 0 20px 30px;
+  }
+  .body-right p {
+    margin: 0 20px 30px;
+  }
+  .body-right .img-responsive {
+    margin-bottom: 30px;
   }
 
   .eg-modal {
