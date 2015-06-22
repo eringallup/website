@@ -614,6 +614,7 @@ body .slick-slide.slick-active {
 .slide-left p {
   padding-right: 0px;
   line-height: 28px;
+  font-size: 17px;
 }
 
 .slide-left,
@@ -748,6 +749,7 @@ body .slick-slide.slick-active {
 }
 .project-item p {
   font-size: 15px;
+  color: #888;
 }
 
 .details {
