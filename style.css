@@ -508,10 +508,11 @@ hr {
   padding: 10px;
   max-width: 150px;
   margin: 0 auto;
-  color: #666;
+  background-color: #F1F1F1;
+  color: #333;
 }
 .whitecard:hover h6 {
-  background-color: #F1F1F1;
+  background-color: #E9E9E9;
   color: #333;
 }
 
