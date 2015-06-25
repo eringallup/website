@@ -75,11 +75,13 @@ $(document).ready(function() {
       var $pager = $('<span class="slide-pager" />');
       $pager.text((idx + 1) + ' of ' + slides.length);
       $(item).find('.slide-left, .slide-right').each(function() {
-        var $div = $('<div class="tbl-cell va-middle" />');
-        $div.html($(this).html());
-        $(this).html($div);
+        var $table = $('<div class="tbl" />');
+        var $row = $('<div class="tbl-cell va-middle" />');
+        $row.html($(this).html());
+        $table.append($row);
+        $(this).html($table);
       });
-      $(item).find('.slide-left > div').prepend($pager);
+      $(item).find('.slide-left .tbl-cell').prepend($pager);
     });
   });
 
