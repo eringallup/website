@@ -1,2 +1,5 @@
 .DS_Store
 _notes
+_site
+Gemfile.lock
+.jekyll-metadata
